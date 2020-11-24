@@ -1,0 +1,51 @@
+module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: [],
+  theme: {
+    colors: {
+      black: '#000000',
+      grey: {
+        dark: '#181818',
+        light: '#828282',
+      },
+      white: '#F4F4F4',
+      green: '#89E2B7',
+    },
+    fontSize: {
+      12: '0.75rem',
+      16: '1rem',
+      40: '2.5rem',
+    },
+    padding: {
+      0: '0',
+      3: '0.1875rem',
+      6: '0.375rem',
+      10: '0.625rem',
+      15: '0.9375rem',
+      20: '1.25rem',
+      30: '1.875rem',
+      40: '2.5rem',
+      50: '3.125rem',
+      90: '5.625rem',
+      160: '10rem',
+    },
+    margin: {
+      0: '0',
+      3: '0.1875rem',
+      6: '0.375rem',
+      10: '0.625rem',
+      15: '0.9375rem',
+      20: '1.25rem',
+      30: '1.875rem',
+      40: '2.5rem',
+      50: '3.125rem',
+      90: '5.625rem',
+      160: '10rem',
+    },
+  },
+  variants: {},
+  plugins: [],
+}
