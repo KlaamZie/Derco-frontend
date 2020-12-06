@@ -1,0 +1,108 @@
+section {
+  @apply relative;
+
+  #projects {
+    > div {
+      @apply h-screen;
+      @apply sticky;
+      @apply top-0;
+
+      img {
+        @apply h-screen;
+        @apply w-full;
+        @apply object-cover;
+      }
+    }
+  }
+
+  #wrapper {
+    @apply absolute;
+    @apply inset-0;
+
+    @apply z-10;
+
+    > article {
+      @apply sticky;
+      @apply top-0;
+      @apply h-screen;
+
+      @apply pb-20;
+
+      @apply flex;
+      @apply flex-col;
+      @apply justify-end;
+      @apply items-center;
+
+      background: rgb(24,24,24);
+      background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(0,212,255,0) 80%);
+
+      h1 {
+        @apply text-50;
+        @apply text-green;
+        @apply text-center;
+
+        @apply mb-30;
+
+        @apply overflow-hidden;
+
+        span {
+          @apply block;
+        }
+
+        &.slideUp {
+          span {
+            animation: slideUp .5s;
+          }
+        }
+
+        @keyframes slideUp {
+          from {
+            transform: translateY(-200%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+
+        &.slideDown {
+          span {
+            animation: slideDown .5s;
+          }
+        }
+
+        @keyframes slideDown {
+          from {
+            transform: translateY(200%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+      }
+
+      aside {
+        @apply mb-10;
+
+        button {
+          @apply text-16;
+          @apply text-green;
+
+          @apply border-0;
+          @apply rounded-full;
+          @apply cursor-pointer;
+
+          @apply p-30;
+
+          background-size: 200% 100%;
+          background-image: linear-gradient(to right, #000000 50%, #89E2B7 50%);
+          transition: 0.3s all;
+          &:hover {
+            cursor: none;
+            @apply text-black;
+            background-position: -100% 0;
+          }
+        }
+      }
+    }
+  }
+}

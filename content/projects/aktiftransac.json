@@ -1,0 +1,11 @@
+{
+  "title": "Aktif Transac",
+  "accroche": "La phrase d'accroche qui tue !",
+  "desc": "lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, sed diam, lorem ipsum dolor sit amet, sed diam, lorem ipsum dolor sit amet, sed diam,",
+  "services": {
+    "1": "UX/UI Design",
+    "2": "Développement Web",
+    "3": "Design Graphique"
+  },
+  "temps" : "1 Mois"
+}

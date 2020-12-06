@@ -11,6 +11,19 @@
 }
 
 body {
-  @apply overflow-hidden;
   @apply bg-grey-dark;
+
+  cursor: url(../images/dot-solid.svg), auto;
+
+  > canvas {
+    @apply hidden;
+  }
+}
+
+@screen xl {
+  body {
+    > canvas {
+      @apply block;
+    }
+  }
 }

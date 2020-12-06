@@ -1,0 +1,123 @@
+header {
+  @apply h-screen;
+  @apply pt-60;
+
+  @apply relative;
+
+  @apply z-0;
+
+  div {
+    @apply relative;
+    @apply h-full;
+    @apply w-full;
+    @apply overflow-hidden;
+
+    img {
+      @apply h-full;
+      @apply w-full;
+      @apply object-contain;
+
+      &.fade-in {
+        animation: fadeIn 1s linear;
+      }
+
+      &.fade-out {
+        animation: fadeOut 1s linear;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 100%;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 100%;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    }
+
+    &::after {
+      content: '';
+      @apply absolute;
+      @apply inset-0;
+
+      -webkit-box-shadow: inset 0px -100px 70px -70px rgba(0,0,0,1);
+      -moz-box-shadow: inset 0px -100px 70px -70px rgba(0,0,0,1);
+      box-shadow: inset 0px -100px 70px -70px rgba(0,0,0,1);
+    }
+  }
+
+  main {
+    @apply absolute;
+    @apply inset-x-0;
+
+    bottom: 20px;
+
+    @apply text-center;
+
+    h2 {
+      @apply text-white;
+      @apply text-60;
+      @apply font-semibold;
+
+      @apply leading-none;
+    }
+
+    article {
+      @apply mt-20;
+      @apply mb-40;
+      h1 {
+        @apply text-16;
+        @apply text-green;
+
+        &.fade-in {
+          animation: fadeIn 1s linear;
+        }
+
+        &.fade-out {
+          animation: fadeOut 1s linear;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 100%;
+          }
+        }
+
+        @keyframes fadeOut {
+          from {
+            opacity: 100%;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    aside {
+      @apply flex;
+      @apply flex-col;
+      @apply justify-center;
+      @apply items-center;
+
+      @apply cursor-pointer;
+
+      p {
+        @apply mt-5;
+        @apply text-grey-light;
+      }
+    }
+  }
+}

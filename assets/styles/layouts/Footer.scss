@@ -1,0 +1,18 @@
+footer {
+  @apply mt-160;
+  @apply mb-60;
+
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+
+  a {
+    @apply no-underline;
+    @apply text-white;
+    @apply text-20;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+}

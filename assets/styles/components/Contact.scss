@@ -1,0 +1,107 @@
+section {
+  form {
+    @apply mt-30;
+
+    @apply grid;
+    @apply gap-20;
+
+    fieldset {
+      @apply border-0;
+      @apply flex;
+      @apply flex-col;
+
+      label {
+        @apply text-20;
+        @apply text-white;
+      }
+
+      input, select {
+        @apply py-10;
+        @apply bg-transparent;
+        @apply text-25;
+
+        @apply border-t-0;
+        @apply border-l-0;
+        @apply border-r-0;
+      }
+
+      input {
+        @apply border-b;
+        @apply border-solid;
+        @apply border-white;
+
+        @apply text-white;
+
+        &::placeholder {
+          @apply text-white;
+          @apply opacity-100;
+        }
+
+        &:focus {
+          &::placeholder {
+            @apply text-transparent;
+          }
+        }
+      }
+
+      select {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        @apply border-b-0;
+        @apply text-green;
+        @apply text-center;
+
+        option {
+          @apply text-green;
+          @apply bg-grey-dark;
+        }
+      }
+
+      textarea {
+        @apply py-10;
+        @apply bg-transparent;
+
+        @apply border-t-0;
+        @apply border-l-0;
+        @apply border-r-0;
+        @apply border-b;
+        @apply border-solid;
+        @apply border-white;
+
+        @apply text-white;
+      }
+    }
+
+    input[type="submit"] {
+      @apply mt-30;
+      @apply p-10;
+
+      @apply border-t-0;
+      @apply border-l-0;
+      @apply border-r-0;
+      @apply border-b;
+      @apply border-solid;
+      @apply border-white;
+
+      @apply bg-transparent;
+
+      @apply text-20;
+      @apply text-white;
+
+      @apply cursor-pointer;
+    }
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}

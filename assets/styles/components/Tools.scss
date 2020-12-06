@@ -1,0 +1,70 @@
+section {
+  article {
+    @apply mt-40;
+
+    @apply text-white;
+    @apply text-60;
+
+    @apply grid;
+    grid-template-columns: repeat(3, 1fr);
+    @apply gap-30;
+
+    @apply overflow-hidden;
+
+    > aside {
+      @apply bg-black;
+
+      width: calc(100vw - (15px * 2));
+      @apply block;
+
+      transition: all .3s;
+
+      &:first-of-type {
+        @apply ml-15;
+      }
+
+      @apply px-40;
+      @apply pb-40;
+      @apply pt-110;
+
+      > div {
+        @apply grid;
+        grid-template-columns: repeat(3, fit-content(100%));
+        @apply gap-20;
+      }
+
+      h2 {
+        @apply mt-30;
+        @apply text-25;
+      }
+
+      p {
+        @apply mt-20;
+        @apply text-16;
+        @apply text-justify;
+      }
+    }
+  }
+
+  >aside:last-of-type {
+    @apply mt-30;
+    @apply flex;
+    @apply justify-center;
+    div {
+      @apply flex;
+      @apply justify-center;
+      @apply items-center;
+      @apply text-green;
+      @apply bg-black;
+
+      &:first-of-type {
+        @apply mr-30;
+      }
+
+      height: 5rem;
+      width: 5rem;
+
+      @apply rounded-full;
+    }
+  }
+}

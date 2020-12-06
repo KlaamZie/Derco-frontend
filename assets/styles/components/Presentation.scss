@@ -1,0 +1,22 @@
+section {
+  article {
+    @apply mt-60;
+    img {
+      @apply w-full;
+    }
+
+    div {
+      @apply mt-30;
+      h3 {
+        @apply text-25;
+        @apply text-grey-light;
+      }
+
+      p {
+        @apply mt-10;
+        @apply text-white;
+        @apply text-justify;
+      }
+    }
+  }
+}

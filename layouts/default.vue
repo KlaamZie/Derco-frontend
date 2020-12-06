@@ -2,6 +2,7 @@
   <div>
     <Menu></Menu>
     <Nuxt />
+    <Footer></Footer>
   </div>
 </template>
 
@@ -18,11 +19,19 @@ export default {
     }
   },
   mounted() {
-    if (window.clientWidth >= 1280) this.init()
+    this.init()
   },
   beforeDestroy() {
     window.removeEventListener('pointermove', (e) => {
       this.moveCircle()
+    })
+  },
+  created() {
+    this.$nuxt.$on('hidecircle', () => {
+      this.hideCircle()
+    })
+    this.$nuxt.$on('displaycircle', () => {
+      this.displayCircle()
     })
   },
   methods: {
@@ -46,7 +55,7 @@ export default {
       canvas.style.pointerEvents = 'none'
 
       this.Circle = new PIXI.Graphics()
-      this.Circle.lineStyle(2, 0xa4a4a4)
+      this.Circle.lineStyle(2, 0x89e2b7)
       this.Circle.drawCircle(0, 0, 25)
 
       this.App.stage.addChild(this.Circle)
@@ -62,6 +71,14 @@ export default {
         this.Circle.x = e.clientX
         this.Circle.y = e.clientY
       }, 50)
+    },
+    hideCircle() {
+      const canvas = document.getElementsByTagName('canvas')[0]
+      canvas.style.visibility = 'hidden'
+    },
+    displayCircle() {
+      const canvas = document.getElementsByTagName('canvas')[0]
+      canvas.style.visibility = 'visible'
     },
   },
 }
