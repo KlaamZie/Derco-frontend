@@ -326,7 +326,11 @@
       </aside>
     </article>
     <aside class="container">
-      <div @click="handlePrev">
+      <div
+        @click="handlePrev"
+        @mouseenter="$nuxt.$emit('hidecircle')"
+        @mouseleave="$nuxt.$emit('displaycircle')"
+      >
         <svg
           width="30"
           height="8"
@@ -336,11 +340,15 @@
         >
           <path
             d="M4.68706 7.1567L2.20934 4.59639H30V3.40361H2.20934L4.68706 0.843298L3.87097 0L0 4L3.87097 8L4.68706 7.1567Z"
-            fill="#89E2B7"
+            fill="currentColor"
           />
         </svg>
       </div>
-      <div @click="handleNext">
+      <div
+        @click="handleNext"
+        @mouseenter="$nuxt.$emit('hidecircle')"
+        @mouseleave="$nuxt.$emit('displaycircle')"
+      >
         <svg
           width="30"
           height="8"
@@ -350,7 +358,7 @@
         >
           <path
             d="M25.3129 0.8433L27.7907 3.40361L4.13775e-07 3.40361L3.06398e-07 4.59639L27.7907 4.59639L25.3129 7.1567L26.129 8L30 4L26.129 2.05554e-06L25.3129 0.8433Z"
-            fill="#89E2B7"
+            fill="currentColor"
           />
         </svg>
       </div>
@@ -389,7 +397,7 @@ export default {
       if (this.step <= 1) {
         this.step++
         if (window.screen.width >= 768) {
-          this.position = 50 * this.step
+          this.position = 40 * this.step
         } else {
           this.position = 100 * this.step
         }

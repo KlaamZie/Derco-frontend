@@ -11,8 +11,9 @@ section {
       @apply flex-col;
 
       label {
-        @apply text-20;
+        @apply text-15;
         @apply text-white;
+        @apply opacity-75;
       }
 
       input, select {
@@ -72,6 +73,13 @@ section {
 
         @apply text-white;
       }
+
+      &:nth-of-type(4), &:nth-of-type(5) {
+        label {
+          @apply text-25;
+          @apply opacity-100;
+        }
+      }
     }
 
     input[type="submit"] {
@@ -90,7 +98,7 @@ section {
       @apply text-20;
       @apply text-white;
 
-      @apply cursor-pointer;
+      cursor: none;
     }
   }
 }
@@ -104,4 +112,181 @@ section {
 .slide-fade-enter, .slide-fade-leave-to {
   transform: translateY(10px);
   opacity: 0;
+}
+
+@screen md {
+  section {
+
+    @apply relative;
+
+    &::before {
+      content: ""; /* empty but necessary */
+      position: absolute;
+      @apply inset-x-0;
+      top: 180px;
+      bottom: 105px;
+      background-image: url(../../images/Fond.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
+      filter: brightness(60%);
+      z-index: -1;
+    }
+
+    &::after {
+      content: ""; /* empty but necessary */
+      position: absolute;
+      @apply inset-x-0;
+      top: 180px;
+      bottom: 105px;
+
+      background: rgb(24,24,24);
+      background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(24,24,24,0) 40%);
+
+      z-index: -1;
+    }
+
+
+    form {
+      @apply mt-80;
+
+      @apply gap-80;
+
+      fieldset {
+        label {
+          @apply text-20;
+        }
+
+        input, select {
+          @apply text-40;
+        }
+
+        select {
+          @apply text-60;
+        }
+
+        textarea {
+          @apply text-20;
+        }
+
+        &:nth-of-type(4), &:nth-of-type(5) {
+          label {
+            @apply text-40;
+            @apply opacity-100;
+          }
+        }
+      }
+
+      input[type="submit"] {
+        @apply mt-0;
+
+        @apply text-60;
+
+        @apply w-2/4;
+
+        @apply mx-auto;
+      }
+    }
+  }
+}
+
+@screen xl {
+  section {
+    &::before {
+      background-size: contain;
+      @apply mx-230;
+      bottom: 200px;
+    }
+
+    &::after {
+      bottom: 200px;
+    }
+
+    > aside {
+      @apply mx-230;
+      @apply grid;
+      @apply grid-cols-2;
+      h3 {
+        @apply col-start-2;
+      }
+
+      h2 {
+        @apply row-start-1;
+      }
+    }
+
+
+    form {
+      @apply mt-200;
+      @apply mx-230;
+
+      @apply gap-60;
+
+      fieldset {
+        label {
+          @apply text-30;
+        }
+
+        input, select {
+          @apply text-50;
+        }
+
+        select {
+          @apply text-50;
+        }
+
+        textarea {
+          @apply text-20;
+        }
+
+        &:nth-of-type(4) {
+          @apply flex-row;
+          @apply items-center;
+          @apply justify-between;
+
+          @apply border-b;
+          @apply border-solid;
+          @apply border-white;
+
+          @apply pb-10;
+
+          label {
+            @apply text-50;
+            @apply opacity-100;
+          }
+
+          select {
+            @apply p-0;
+          }
+        }
+      }
+
+      input[type="submit"] {
+        @apply mt-0;
+
+        @apply text-50;
+
+        @apply w-1/4;
+
+        @apply mx-auto;
+      }
+    }
+  }
+}
+
+@screen extra {
+  section {
+    &::before {
+      @apply mx-320;
+    }
+
+    > aside {
+      @apply mx-320;
+    }
+
+
+    form {
+      @apply mx-320;
+    }
+  }
 }

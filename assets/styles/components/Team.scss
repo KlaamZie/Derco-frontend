@@ -9,14 +9,131 @@ section {
       @apply grid;
       @apply gap-10;
 
-      h1 {
-        @apply text-white;
-        @apply text-25;
+      img {
+        @apply w-full;
+        @apply object-cover;
+        max-height: 500px;
       }
 
-      h2 {
-        @apply text-green;
-        @apply text-20;
+      > div {
+        > div {
+          h1 {
+            @apply text-white;
+            @apply text-25;
+
+            @apply mb-10;
+          }
+
+          h2 {
+            @apply text-green;
+            @apply text-20;
+          }
+        }
+
+        p {
+          @apply hidden;
+        }
+      }
+    }
+  }
+}
+
+@screen md {
+  section {
+    > div {
+      @apply mt-30;
+
+      @apply gap-60;
+
+      > article {
+        @apply grid-cols-2;
+        @apply gap-30;
+
+        @apply items-end;
+
+        > div {
+          @apply mb-60;
+
+          > div {
+            h1 {
+              @apply text-30;
+            }
+          }
+
+          p {
+            @apply block;
+            @apply mt-30;
+            @apply text-white;
+            @apply text-justify;
+          }
+        }
+
+        &:last-of-type {
+          img {
+            @apply col-start-2;
+          }
+
+          div {
+            @apply row-start-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@screen xl {
+  section {
+    > aside {
+      @apply absolute;
+      left: 60%;
+    }
+    > div {
+      @apply mt-0;
+
+      @apply gap-80;
+
+      > article {
+        @apply relative;
+
+        > img {
+          max-height: 800px;
+        }
+
+        > div {
+          width: 70%;
+
+          > div {
+            @apply absolute;
+            bottom: 100px;
+          }
+
+          p {
+            @apply text-20;
+          }
+        }
+
+        &:first-of-type {
+          grid-template-columns: 60% 40%;
+
+          > div {
+            > div {
+              left: 60px;
+            }
+          }
+        }
+
+        &:last-of-type {
+          grid-template-columns: 40% 60%;
+
+          > div {
+            @apply justify-self-end;
+            > div {
+              left: 40%;
+              @apply ml-90;
+            }
+          }
+        }
       }
     }
   }

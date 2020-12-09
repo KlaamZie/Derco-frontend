@@ -1,5 +1,6 @@
 <template>
-  <nav>
+  <nav id="nav">
+    <img src="@/assets/images/logo_web.svg" alt="" />
     <button
       id="btn-menu"
       @click="handleMenu"
@@ -19,8 +20,8 @@
             <li v-show="displayMenu">
               <a href="#project">
                 Votre Projet
-                <span
-                  ><svg
+                <span>
+                  <svg
                     width="5"
                     height="5"
                     viewBox="0 0 5 5"
@@ -134,9 +135,27 @@ export default {
       if (this.displayMenu) {
         span[0].style.transform = 'translateY(0)'
         span[1].style.transform = 'translateY(100%)'
+
+        if (window.innerWidth >= 1280) {
+          btn.style.transform = ''
+          btn.style.padding = ''
+          btn.style.backgroundImage = ''
+          btn.style.color = ''
+          span[0].style.fontSize = ''
+          span[1].style.fontSize = ''
+        }
       } else {
         span[0].style.transform = 'translateY(-100%)'
         span[1].style.transform = 'translateY(0)'
+        if (window.innerWidth >= 1280) {
+          btn.style.transform = 'translate(60px, 40px)'
+          btn.style.padding = '15px 35px'
+          btn.style.backgroundImage =
+            'linear-gradient(to right, #F4F4F4 50%, #89E2B7 50%)'
+          btn.style.color = 'black'
+          span[0].style.fontSize = '16px'
+          span[1].style.fontSize = '16px'
+        }
       }
       this.displayMenu = !this.displayMenu
     },

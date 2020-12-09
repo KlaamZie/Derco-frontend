@@ -6,7 +6,7 @@ header {
 
   @apply z-0;
 
-  div {
+  >div {
     @apply relative;
     @apply h-full;
     @apply w-full;
@@ -44,20 +44,27 @@ header {
       }
     }
 
-    &::after {
+    &::before {
       content: '';
       @apply absolute;
-      @apply inset-0;
+      @apply bottom-0;
+      @apply inset-x-0;
 
-      -webkit-box-shadow: inset 0px -100px 70px -70px rgba(0,0,0,1);
-      -moz-box-shadow: inset 0px -100px 70px -70px rgba(0,0,0,1);
-      box-shadow: inset 0px -100px 70px -70px rgba(0,0,0,1);
+      height: 100px;
+
+      @apply z-10;
+
+      -webkit-box-shadow: inset 0px -50px 40px -0px rgba(24,24,24,1);
+      -moz-box-shadow: inset 0px -50px 40px -0px rgba(24,24,24,1);
+      box-shadow: inset 0px -50px 40px -0px rgba(24,24,24,1);
     }
   }
 
-  main {
+  >main {
     @apply absolute;
     @apply inset-x-0;
+
+    @apply z-20;
 
     bottom: 20px;
 
@@ -74,6 +81,7 @@ header {
     article {
       @apply mt-20;
       @apply mb-40;
+
       h1 {
         @apply text-16;
         @apply text-green;
@@ -112,12 +120,149 @@ header {
       @apply justify-center;
       @apply items-center;
 
-      @apply cursor-pointer;
+      cursor: none;
 
       p {
         @apply mt-5;
         @apply text-grey-light;
       }
+    }
+  }
+}
+
+@screen md {
+  header {
+    @apply pt-180;
+
+    >div {
+
+      @apply grid;
+      @apply grid-cols-2;
+
+      @apply content-end;
+
+      @apply px-40;
+
+      img {
+        @apply object-contain;
+      }
+    }
+
+    >main {
+      @apply mx-40;
+      bottom: 80px;
+
+      @apply text-left;
+
+      h2 {
+        @apply text-50;
+        @apply font-light;
+
+        span {
+          @apply text-green;
+          @apply font-light;
+        }
+      }
+
+      article {
+        @apply mt-40;
+        @apply mb-0;
+
+        @apply grid;
+        @apply grid-cols-2;
+
+        > div {
+          h1 {
+            @apply text-20;
+            @apply text-grey-light;
+          }
+
+          ul {
+            @apply grid;
+            grid-template-columns: repeat(3, fit-content(100%));
+            @apply gap-20;
+
+            li {
+              a {
+                @apply no-underline;
+                @apply text-white;
+                @apply text-12;
+              }
+            }
+          }
+        }
+      }
+
+      aside {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+
+        cursor: none;
+
+        p {
+          @apply mt-5;
+          @apply text-grey-light;
+        }
+      }
+    }
+  }
+}
+
+@screen xl {
+  header {
+    @apply pt-100;
+
+    > div {
+      @apply px-160;
+
+      img {
+        transition: all 0.3s;
+        &.highlight {
+          filter : opacity(25%);
+        }
+      }
+    }
+
+    >main {
+      @apply mx-160;
+      bottom: 60px;
+
+      h2 {
+        @apply text-80;
+      }
+
+      article {
+        @apply grid;
+        grid-template-columns: repeat(2, fit-content(100%));
+        @apply gap-100;
+
+        > div {
+          h1 {
+            transition: all .3s;
+          }
+
+          &.highlight {
+            h1 {
+              @apply text-25;
+              @apply text-green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@screen extra {
+  header {
+    > div {
+      @apply px-320;
+    }
+
+    >main {
+      @apply mx-320;
     }
   }
 }

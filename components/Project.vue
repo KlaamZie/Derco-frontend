@@ -1,13 +1,16 @@
 <template>
   <section id="displayedProject" style="overflow: hidden">
-    <button
-      id="closeProjectBtn"
-      @click="$emit('closeproject')"
-      @mouseenter="$nuxt.$emit('hidecircle')"
-      @mouseleave="$nuxt.$emit('displaycircle')"
-    >
-      Fermer
-    </button>
+    <aside>
+      <img src="@/assets/images/logo_web.svg" alt="" />
+      <button
+        id="closeProjectBtn"
+        @click="$emit('closeproject')"
+        @mouseenter="$nuxt.$emit('hidecircle')"
+        @mouseleave="$nuxt.$emit('displaycircle')"
+      >
+        Fermer
+      </button>
+    </aside>
     <img
       :src="
         'http://api.derniere-cohorte.com/assets/' + isactive.slug + '/1.jpg'

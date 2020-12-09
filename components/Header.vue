@@ -1,21 +1,27 @@
 <template>
-  <header>
+  <header id="header">
     <div>
       <img
-        v-show="index === 1"
+        v-show="index === 1 || index === 0"
+        id="headerLeftImg"
         class="slides"
         src="@/assets/images/test.png"
         alt="test"
+        @mouseenter="enterImageLeft"
+        @mouseleave="leaveImageLeft"
       />
       <img
-        v-show="index === 2"
+        v-show="index === 2 || index === 0"
+        id="headerRightImg"
         class="slides"
         src="@/assets/images/test1.png"
         alt="test"
+        @mouseenter="enterImageRight"
+        @mouseleave="leaveImageRight"
       />
     </div>
     <main class="container">
-      <h2>
+      <h2 v-if="index !== 0">
         <svg
           width="198"
           height="95"
@@ -89,13 +95,42 @@
           />
         </svg>
       </h2>
+      <h2 v-else>
+        Repensez votre entreprise. <br /><span>Créons votre identité.</span>
+      </h2>
       <article>
         <h1 v-show="index === 1" class="texts">
           UX/UI Design & Graphisme Print
         </h1>
         <h1 v-show="index === 2" class="texts">Developper Web / VueJs</h1>
+        <div
+          v-if="index === 0"
+          id="headerGuillaume"
+          @mouseenter="enterImageLeft"
+          @mouseleave="leaveImageLeft"
+        >
+          <h1>Guillaume P.</h1>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Linkedin</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div
+          v-if="index === 0"
+          id="headerEnzo"
+          @mouseenter="enterImageRight"
+          @mouseleave="leaveImageRight"
+        >
+          <h1>Enzo V.</h1>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Linkedin</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
       </article>
-      <aside @click="handleMore()">
+      <aside v-if="index !== 0" @click="handleMore()">
         <svg
           width="1"
           height="30"
@@ -124,35 +159,67 @@ export default {
     return {
       index: 1,
       interval: null,
+      test: false,
     }
   },
   mounted() {
-    this.interval = setInterval(this.fade, 10000)
+    if (window.screen.width < 768) {
+      this.interval = setInterval(this.fade, 10000)
+    }
+    if (window.screen.width >= 768) {
+      this.index = 0
+    }
   },
   beforeDestroy() {
     if (this.interval) clearInterval(this.interval)
   },
   methods: {
     fade() {
-      const els = document.getElementsByClassName('slides')
-      const texts = document.getElementsByClassName('texts')
-      els[this.index - 1].classList.add('fade-out')
-      texts[this.index - 1].classList.add('fade-out')
-      setTimeout(() => {
-        els[this.index - 1].classList.remove('fade-out')
-        texts[this.index - 1].classList.remove('fade-out')
-        this.index === 2 ? (this.index = 1) : (this.index = 2)
-        els[this.index - 1].classList.add('fade-in')
-        texts[this.index - 1].classList.add('fade-in')
-      }, 1000)
-      setTimeout(() => {
-        els[this.index - 1].classList.remove('fade-in')
-        texts[this.index - 1].classList.remove('fade-in')
-      }, 2000)
+      if (window.screen.width < 768) {
+        const els = document.getElementsByClassName('slides')
+        const texts = document.getElementsByClassName('texts')
+        els[this.index - 1].classList.add('fade-out')
+        texts[this.index - 1].classList.add('fade-out')
+        setTimeout(() => {
+          els[this.index - 1].classList.remove('fade-out')
+          texts[this.index - 1].classList.remove('fade-out')
+          this.index === 2 ? (this.index = 1) : (this.index = 2)
+          els[this.index - 1].classList.add('fade-in')
+          texts[this.index - 1].classList.add('fade-in')
+        }, 1000)
+        setTimeout(() => {
+          els[this.index - 1].classList.remove('fade-in')
+          texts[this.index - 1].classList.remove('fade-in')
+        }, 2000)
+      }
     },
     handleMore() {
       const element = document.getElementById('presentation')
       element.scrollIntoView()
+    },
+    enterImageLeft() {
+      const img = document.getElementById('headerLeftImg')
+      const el = document.getElementById('headerGuillaume')
+      img.classList.add('highlight')
+      el.classList.add('highlight')
+    },
+    leaveImageLeft() {
+      const img = document.getElementById('headerLeftImg')
+      const el = document.getElementById('headerGuillaume')
+      img.classList.remove('highlight')
+      el.classList.remove('highlight')
+    },
+    enterImageRight() {
+      const img = document.getElementById('headerRightImg')
+      const el = document.getElementById('headerEnzo')
+      img.classList.add('highlight')
+      el.classList.add('highlight')
+    },
+    leaveImageRight() {
+      const img = document.getElementById('headerRightImg')
+      const el = document.getElementById('headerEnzo')
+      img.classList.remove('highlight')
+      el.classList.remove('highlight')
     },
   },
 }

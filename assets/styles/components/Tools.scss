@@ -3,7 +3,6 @@ section {
     @apply mt-40;
 
     @apply text-white;
-    @apply text-60;
 
     @apply grid;
     grid-template-columns: repeat(3, 1fr);
@@ -55,16 +54,78 @@ section {
       @apply justify-center;
       @apply items-center;
       @apply text-green;
-      @apply bg-black;
-
-      &:first-of-type {
-        @apply mr-30;
-      }
 
       height: 5rem;
       width: 5rem;
 
       @apply rounded-full;
+
+      background-size: 200% 100%;
+      background-image: linear-gradient(to right, #000000 50%, #89E2B7 50%);
+      transition: 0.3s all;
+
+      &:hover {
+        cursor: none;
+        @apply text-black;
+        background-position: -100% 0;
+      }
+
+      &:first-of-type {
+        @apply mr-30;
+      }
+    }
+  }
+}
+
+@screen md {
+  section {
+    article {
+      @apply mt-60;
+
+      @apply gap-40;
+
+      > aside {
+        width: calc(60vw - (40px * 2));
+
+        &:first-of-type {
+          @apply ml-40;
+        }
+      }
+    }
+
+    >aside:last-of-type {
+      @apply justify-start;
+    }
+  }
+}
+
+@screen xl {
+  section {
+    article {
+      @apply grid-cols-3;
+      @apply gap-30;
+
+      @apply mx-160;
+
+      > aside {
+        width: 100%;
+
+        &:first-of-type {
+          @apply ml-0;
+        }
+      }
+    }
+
+    >aside:last-of-type {
+      @apply hidden;
+    }
+  }
+}
+
+@screen extra {
+  section {
+    article {
+      @apply mx-320;
     }
   }
 }

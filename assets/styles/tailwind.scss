@@ -22,3 +22,40 @@
     }
   }
 }
+
+@screen md {
+  .container {
+    @apply mx-40;
+  }
+
+  .section {
+    @apply mt-160;
+  }
+
+  .title {
+    h2 {
+      @apply text-40;
+    }
+  }
+}
+
+@screen xl {
+  .container {
+    @apply mx-160;
+  }
+
+  .title {
+    h3 {
+      @apply text-25;
+    }
+    h2 {
+      @apply text-60;
+    }
+  }
+}
+
+@screen extra {
+  .container {
+    @apply mx-320;
+  }
+}

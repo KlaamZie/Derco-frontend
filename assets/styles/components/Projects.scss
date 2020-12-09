@@ -36,14 +36,19 @@ section {
       background: rgb(24,24,24);
       background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(0,212,255,0) 80%);
 
+      h2 {
+        @apply hidden;
+      }
+
       h1 {
         @apply text-50;
         @apply text-green;
-        @apply text-center;
 
         @apply mb-30;
 
         @apply overflow-hidden;
+
+        @apply leading-none;
 
         span {
           @apply block;
@@ -80,6 +85,10 @@ section {
         }
       }
 
+      p {
+        @apply hidden;
+      }
+
       aside {
         @apply mb-10;
 
@@ -89,7 +98,7 @@ section {
 
           @apply border-0;
           @apply rounded-full;
-          @apply cursor-pointer;
+          cursor: none;
 
           @apply p-30;
 
@@ -102,6 +111,92 @@ section {
             background-position: -100% 0;
           }
         }
+      }
+    }
+  }
+}
+
+@screen md {
+  section {
+
+    #wrapper {
+      > article {
+        @apply pb-0;
+
+        @apply pl-40;
+
+        @apply justify-center;
+        @apply items-start;
+
+        background: linear-gradient(90deg, rgba(24,24,24,1) 10%, rgba(0,212,255,0) 100%);
+
+        h1 {
+          @apply text-80;
+        }
+
+        p {
+          @apply block;
+          @apply text-white;
+          width: 55%;
+
+          @apply mb-120;
+        }
+
+        aside {
+          @apply mb-0;
+
+          button {
+            @apply text-20;
+          }
+        }
+      }
+    }
+  }
+}
+
+@screen xl {
+  section {
+    #wrapper {
+      > article {
+        @apply pb-0;
+
+        @apply pl-260;
+
+        background: linear-gradient(90deg, rgba(24,24,24,1) 25%, rgba(0,212,255,0) 100%);
+
+        h2 {
+          @apply inline;
+          @apply text-white;
+          @apply text-25;
+
+          @apply mb-20;
+        }
+
+        h1 {
+          @apply text-100;
+        }
+
+        p {
+          width: 35%;
+
+          @apply mb-80;
+        }
+
+        aside {
+          button {
+            @apply text-16;
+          }
+        }
+      }
+    }
+  }
+}
+
+@screen extra {
+  section {
+    #wrapper {
+      > article {
+        @apply pl-400;
       }
     }
   }

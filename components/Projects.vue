@@ -2,9 +2,11 @@
   <section class="section">
     <div id="wrapper">
       <article>
+        <h2>{{ Object.values(services).join(' / ') }}</h2>
         <h1 id="project-title">
           <span>{{ isActive.title }}</span>
         </h1>
+        <p>{{ desc.slice(0, 140) }}...</p>
         <aside>
           <button
             @click.prevent="handleDisplayProject"
@@ -52,6 +54,14 @@ export default {
       index: 0,
       scrollPosition: 0,
     }
+  },
+  computed: {
+    services() {
+      return this.projects[this.index].services
+    },
+    desc() {
+      return this.projects[this.index].desc
+    },
   },
   mounted() {
     document.addEventListener('scroll', this.handleScroll)

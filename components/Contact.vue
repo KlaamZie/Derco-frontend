@@ -1,10 +1,10 @@
 <template>
-  <section class="container section">
-    <aside class="title">
+  <section class="section">
+    <aside class="container title">
       <h3>Nous parler</h3>
       <h2>Plus de détails ou <span>des question ?</span></h2>
     </aside>
-    <form>
+    <form class="container">
       <fieldset>
         <transition name="slide-fade">
           <label v-show="fields.name" for="names">Votre nom & prénom*</label>
@@ -51,7 +51,7 @@
       </fieldset>
       <fieldset>
         <label for="message">Message supplémentaire</label>
-        <textarea id="message" name="message" cols="30" rows="2"></textarea>
+        <textarea id="message" name="message" cols="30" rows="6"></textarea>
       </fieldset>
       <input type="submit" value="Envoyer" />
     </form>

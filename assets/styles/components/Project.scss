@@ -11,28 +11,33 @@ section {
 
   @apply bg-grey-dark;
 
-  > button {
+  > aside {
     @apply fixed;
-    @apply outline-none;
-    @apply text-green;
-    @apply border-0;
-    @apply py-20;
-    @apply px-50;
-    @apply rounded-full;
-    @apply mt-20;
-    @apply z-50;
+    > img {
+      @apply hidden;
+    }
+    > button {
+      @apply outline-none;
+      @apply text-green;
+      @apply border-0;
+      @apply py-10;
+      @apply px-30;
+      @apply rounded-full;
+      @apply mt-20;
+      @apply z-50;
 
-    @apply text-16;
+      @apply text-16;
 
-    transition: all .3s;
+      transition: all .3s;
 
-    background-size: 200% 100%;
-    background-image: linear-gradient(to right, #000000 50%, #89E2B7 50%);
-    transition: 0.3s all;
-    &:hover {
-      cursor: none;
-      @apply text-black;
-      background-position: -100% 0;
+      background-size: 200% 100%;
+      background-image: linear-gradient(to right, #000000 50%, #89E2B7 50%);
+      transition: 0.3s all;
+      &:hover {
+        cursor: none;
+        @apply text-black;
+        background-position: -100% 0;
+      }
     }
   }
 
@@ -76,13 +81,14 @@ section {
       aside {
         @apply grid;
         @apply gap-10;
+        @apply content-start;
 
         h2, li, p {
           @apply text-20;
         }
 
         h2 {
-           @apply font-semibold;
+          @apply font-semibold;
         }
 
         li, p {
@@ -106,7 +112,7 @@ section {
       @apply flex;
       @apply items-end;
 
-      @apply cursor-pointer;
+      cursor: none;
 
       @apply text-green;
       @apply text-40;
@@ -119,7 +125,121 @@ section {
       svg {
         height: 40px;
         width: 40px;
-        //@apply w-full;
+      }
+    }
+  }
+}
+
+@screen md {
+  section {
+    > aside {
+      @apply w-full;
+      @apply grid;
+      grid-template-columns: repeat(2,fit-content(100%));
+      @apply justify-between;
+      @apply items-center;
+
+      @apply mt-60;
+      @apply px-60;
+
+      > img {
+        @apply block;
+        max-height: 60px;
+        @apply flex-grow-0;
+      }
+      > button {
+        @apply py-15;
+        @apply px-40;
+        @apply mt-0;
+
+        @apply text-25;
+      }
+    }
+
+    article:first-of-type {
+      @apply px-40;
+      @apply py-100;
+
+      div:first-of-type {
+        h1 {
+          @apply text-50;
+        }
+      }
+
+      div:last-of-type {
+        aside {
+          ul {
+            @apply grid;
+            grid-template-columns: repeat(3, fit-content(100%));
+            @apply gap-30;
+          }
+        }
+      }
+    }
+
+    article:last-of-type {
+      @apply py-100;
+
+      button {
+        @apply text-60;
+
+        svg {
+          @apply mb-5;
+        }
+      }
+    }
+  }
+}
+
+@screen xl {
+  section {
+    > aside {
+      @apply mt-40;
+      @apply px-160;
+    }
+
+    article:first-of-type {
+      @apply px-160;
+      @apply pt-200;
+
+      grid-template-columns: repeat(2, fit-content(100%));
+      @apply gap-60;
+
+      div:first-of-type {
+        @apply col-start-2;
+        h1 {
+          @apply text-60;
+        }
+
+        p {
+          @apply text-20;
+        }
+      }
+
+      div:last-of-type {
+        @apply col-start-1;
+        @apply row-start-1;
+        aside {
+          h2 {
+            @apply text-grey-light;
+          }
+          ul {
+            @apply grid-cols-1;
+            @apply gap-5;
+          }
+        }
+      }
+    }
+
+    article:last-of-type {
+      @apply py-200;
+
+      button {
+        @apply text-90;
+
+        svg {
+          @apply mb-10;
+        }
       }
     }
   }
