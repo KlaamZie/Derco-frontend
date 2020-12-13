@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section id="portfolio" class="section">
     <div id="wrapper">
       <article>
         <h2>{{ Object.values(services).join(' / ') }}</h2>
@@ -27,7 +27,7 @@
       >
         <img
           :src="
-            'http://api.derniere-cohorte.com/assets/' +
+            'https://api.derniere-cohorte.com/assets/' +
             project.slug +
             '/slider.jpg'
           "

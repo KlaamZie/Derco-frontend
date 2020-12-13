@@ -12,6 +12,7 @@ section {
       img {
         @apply w-full;
         @apply object-cover;
+        @apply object-top;
         max-height: 500px;
       }
 

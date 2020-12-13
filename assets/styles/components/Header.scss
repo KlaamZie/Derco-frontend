@@ -17,6 +17,8 @@ header {
       @apply w-full;
       @apply object-contain;
 
+      filter: grayscale(100%);
+
       &.fade-in {
         animation: fadeIn 1s linear;
       }
@@ -54,9 +56,9 @@ header {
 
       @apply z-10;
 
-      -webkit-box-shadow: inset 0px -50px 40px -0px rgba(24,24,24,1);
-      -moz-box-shadow: inset 0px -50px 40px -0px rgba(24,24,24,1);
-      box-shadow: inset 0px -50px 40px -0px rgba(24,24,24,1);
+      -webkit-box-shadow: inset 0px -60px 50px 0px rgba(24,24,24,1);
+      -moz-box-shadow: inset 0px -60px 50px 0px rgba(24,24,24,1);
+      box-shadow: inset 0px -60px 50px 0px rgba(24,24,24,1);
     }
   }
 
@@ -220,7 +222,7 @@ header {
       img {
         transition: all 0.3s;
         &.highlight {
-          filter : opacity(25%);
+          filter : grayscale(0%);
         }
       }
     }

@@ -1,7 +1,7 @@
 <template>
-  <section class="section">
+  <section id="contact" class="section">
     <aside class="container title">
-      <h3>Nous parler</h3>
+      <h3>Nous contacter</h3>
       <h2>Plus de détails ou <span>des question ?</span></h2>
     </aside>
     <form class="container">
@@ -53,7 +53,12 @@
         <label for="message">Message supplémentaire</label>
         <textarea id="message" name="message" cols="30" rows="6"></textarea>
       </fieldset>
-      <input type="submit" value="Envoyer" />
+      <input
+        type="submit"
+        value="Envoyer"
+        @mouseenter="$nuxt.$emit('hidecircle')"
+        @mouseleave="$nuxt.$emit('displaycircle')"
+      />
     </form>
   </section>
 </template>

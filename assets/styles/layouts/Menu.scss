@@ -7,7 +7,7 @@ nav {
 
   @apply z-50;
 
-  > img:first-of-type {
+  > svg:first-of-type {
     @apply hidden;
   }
 
@@ -185,11 +185,20 @@ nav {
     @apply mt-60;
     @apply px-60;
 
-    > img:first-of-type {
+    > svg:first-of-type {
       @apply block;
       @apply z-50;
 
       max-height: 60px;
+
+      @apply text-white;
+
+      transition: all .3s;
+
+      &:hover {
+        cursor: none;
+        @apply text-green;
+      }
     }
 
     button {
@@ -279,7 +288,7 @@ nav {
 
         li {
           &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
-            @apply ml-80;
+            @apply ml-100;
           }
           a {
             @apply text-25;

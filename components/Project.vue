@@ -13,7 +13,7 @@
     </aside>
     <img
       :src="
-        'http://api.derniere-cohorte.com/assets/' + isactive.slug + '/1.jpg'
+        'https://api.derniere-cohorte.com/assets/' + isactive.slug + '/1.jpg'
       "
       alt=""
       onerror="this.style.display = 'none'"
@@ -40,21 +40,21 @@
     </article>
     <img
       :src="
-        'http://api.derniere-cohorte.com/assets/' + isactive.slug + '/2.jpg'
+        'https://api.derniere-cohorte.com/assets/' + isactive.slug + '/2.jpg'
       "
       alt=""
       onerror="this.style.display = 'none'"
     />
     <img
       :src="
-        'http://api.derniere-cohorte.com/assets/' + isactive.slug + '/3.jpg'
+        'https://api.derniere-cohorte.com/assets/' + isactive.slug + '/3.jpg'
       "
       alt=""
       onerror="this.style.display = 'none'"
     />
     <img
       :src="
-        'http://api.derniere-cohorte.com/assets/' + isactive.slug + '/4.jpg'
+        'https://api.derniere-cohorte.com/assets/' + isactive.slug + '/4.jpg'
       "
       alt=""
       onerror="this.style.display = 'none'"

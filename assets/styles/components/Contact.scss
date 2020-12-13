@@ -99,6 +99,15 @@ section {
       @apply text-white;
 
       cursor: none;
+
+      background-size: 100% 200%;
+      background-image: linear-gradient(0deg, #F4F4F4 50%, rgba(0,212,255,0) 50%);;
+      transition: 0.3s all;
+
+      &:hover {
+        @apply text-black;
+        background-position: 0 100%;
+      }
     }
   }
 }
@@ -125,7 +134,7 @@ section {
       @apply inset-x-0;
       top: 180px;
       bottom: 105px;
-      background-image: url(../../images/Fond.png);
+      background-image: url('https://api.derniere-cohorte.com/assets/images/contact_background.png');
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: cover;
@@ -194,12 +203,6 @@ section {
   section {
     &::before {
       background-size: contain;
-      @apply mx-230;
-      bottom: 200px;
-    }
-
-    &::after {
-      bottom: 200px;
     }
 
     > aside {
@@ -276,9 +279,6 @@ section {
 
 @screen extra {
   section {
-    &::before {
-      @apply mx-320;
-    }
 
     > aside {
       @apply mx-320;
