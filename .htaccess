@@ -11,7 +11,7 @@ PassengerStartupFile app.js
 # DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
 
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^ dev.derniere-cohorte.com\.com [NC]
+RewriteCond %{HTTP_HOST} ^dev.derniere-cohorte\.com [NC]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI}
 
