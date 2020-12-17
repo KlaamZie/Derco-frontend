@@ -1,24 +1,28 @@
 <template>
   <header id="header">
     <div>
-      <img
-        v-show="index === 1 || index === 0"
-        id="headerLeftImg"
-        class="slides"
-        src="https://api.derniere-cohorte.com/assets/images/guillaume_header.png"
-        alt="test"
-        @mouseenter="enterImageLeft"
-        @mouseleave="leaveImageLeft"
-      />
-      <img
-        v-show="index === 2 || index === 0"
-        id="headerRightImg"
-        class="slides"
-        src="https://api.derniere-cohorte.com/assets/images/enzo_header.png"
-        alt="test"
-        @mouseenter="enterImageRight"
-        @mouseleave="leaveImageRight"
-      />
+      <transition name="fade" mode="out-in">
+        <img
+          v-if="index === 1 || index === 0"
+          id="headerLeftImg"
+          key="guillaume"
+          class="slides"
+          src="https://api.derniere-cohorte.com/assets/images/guillaume_header.png"
+          alt="test"
+          @mouseenter="enterImageLeft"
+          @mouseleave="leaveImageLeft"
+        />
+        <img
+          v-if="index === 2 || index === 0"
+          id="headerRightImg"
+          key="enzo"
+          class="slides"
+          src="https://api.derniere-cohorte.com/assets/images/enzo_header.png"
+          alt="test"
+          @mouseenter="enterImageRight"
+          @mouseleave="leaveImageRight"
+        />
+      </transition>
     </div>
     <main class="container">
       <h2 v-if="index !== 0">
@@ -99,10 +103,14 @@
         Repensez votre entreprise. <br /><span>Créons votre identité.</span>
       </h2>
       <article>
-        <h1 v-show="index === 1" class="texts">
-          UX/UI Design & Graphisme Print
-        </h1>
-        <h1 v-show="index === 2" class="texts">Developper Web / VueJs</h1>
+        <transition name="fade" mode="out-in">
+          <h1 v-if="index === 1" key="guillaume" class="texts">
+            UX/UI Design & Graphisme Print
+          </h1>
+          <h1 v-if="index === 2" key="enzo" class="texts">
+            Developper Web / VueJs
+          </h1>
+        </transition>
         <div
           v-if="index === 0"
           id="headerGuillaume"
@@ -176,25 +184,11 @@ export default {
   methods: {
     fade() {
       if (window.screen.width < 768) {
-        const els = document.getElementsByClassName('slides')
-        const texts = document.getElementsByClassName('texts')
-        els[this.index - 1].classList.add('fade-out')
-        texts[this.index - 1].classList.add('fade-out')
-        setTimeout(() => {
-          els[this.index - 1].classList.remove('fade-out')
-          texts[this.index - 1].classList.remove('fade-out')
-          this.index === 2 ? (this.index = 1) : (this.index = 2)
-          els[this.index - 1].classList.add('fade-in')
-          texts[this.index - 1].classList.add('fade-in')
-        }, 1000)
-        setTimeout(() => {
-          els[this.index - 1].classList.remove('fade-in')
-          texts[this.index - 1].classList.remove('fade-in')
-        }, 2000)
+        this.index === 2 ? (this.index = 1) : (this.index = 2)
       }
     },
     handleMore() {
-      const element = document.getElementById('presentation')
+      const element = document.getElementById('project')
       element.scrollIntoView()
     },
     enterImageLeft() {

@@ -5,7 +5,10 @@
       <h2>Nous donnons forme à votre identité web et imprimé.</h2>
     </aside>
     <article>
-      <img src="@/assets/images/pres1.png" alt="test" />
+      <img
+        src="https://api.derniere-cohorte.com/assets/images/pres1.png"
+        alt="test"
+      />
       <div class="container">
         <h3>UX/UI Design & Web Developpement</h3>
         <p>
@@ -19,7 +22,10 @@
       </div>
     </article>
     <article>
-      <img src="@/assets/images/pres2.png" alt="test" />
+      <img
+        src="https://api.derniere-cohorte.com/assets/images/pres2.png"
+        alt="test"
+      />
       <div class="container">
         <h3>Graphisme Imprimé</h3>
         <p>

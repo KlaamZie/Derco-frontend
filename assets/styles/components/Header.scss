@@ -19,31 +19,31 @@ header {
 
       filter: grayscale(100%);
 
-      &.fade-in {
-        animation: fadeIn 1s linear;
-      }
-
-      &.fade-out {
-        animation: fadeOut 1s linear;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 100%;
-        }
-      }
-
-      @keyframes fadeOut {
-        from {
-          opacity: 100%;
-        }
-        to {
-          opacity: 0;
-        }
-      }
+      //&.fade-in {
+      //  animation: fadeIn 1s linear;
+      //}
+      //
+      //&.fade-out {
+      //  animation: fadeOut 1s linear;
+      //}
+      //
+      //@keyframes fadeIn {
+      //  from {
+      //    opacity: 0;
+      //  }
+      //  to {
+      //    opacity: 100%;
+      //  }
+      //}
+      //
+      //@keyframes fadeOut {
+      //  from {
+      //    opacity: 100%;
+      //  }
+      //  to {
+      //    opacity: 0;
+      //  }
+      //}
     }
   }
 
@@ -67,7 +67,7 @@ header {
 
     @apply z-20;
 
-    bottom: 20px;
+    bottom: 60px;
 
     @apply text-center;
 
@@ -266,4 +266,11 @@ header {
       @apply mx-320;
     }
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
