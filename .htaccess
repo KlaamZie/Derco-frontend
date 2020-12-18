@@ -14,6 +14,8 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^derniere-cohorte\.com [NC]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI}
+RewriteCond %{HTTP_HOST} ^www.derniere-cohorte.com [NC]
+RewriteRule ^(.*)$ https://derniere-cohorte.com/$1 [L,R=301]
 
 PassengerFriendlyErrorPages off
 PassengerAppEnv production
