@@ -1,28 +1,40 @@
 <template>
   <header id="header">
-    <div>
+    <div v-if="index !== 0">
       <transition name="fade" mode="out-in">
         <img
-          v-if="index === 1 || index === 0"
-          id="headerLeftImg"
+          v-if="index === 1"
           key="guillaume"
           class="slides"
           src="https://api.derniere-cohorte.com/assets/images/guillaume_header.png"
           alt="test"
-          @mouseenter="enterImageLeft"
-          @mouseleave="leaveImageLeft"
         />
         <img
-          v-if="index === 2 || index === 0"
-          id="headerRightImg"
+          v-if="index === 2"
           key="enzo"
           class="slides"
           src="https://api.derniere-cohorte.com/assets/images/enzo_header.png"
           alt="test"
-          @mouseenter="enterImageRight"
-          @mouseleave="leaveImageRight"
         />
       </transition>
+    </div>
+    <div v-else>
+      <img
+        id="headerLeftImg"
+        class="slides"
+        src="https://api.derniere-cohorte.com/assets/images/guillaume_header.png"
+        alt="test"
+        @mouseenter="enterImageLeft"
+        @mouseleave="leaveImageLeft"
+      />
+      <img
+        id="headerRightImg"
+        class="slides"
+        src="https://api.derniere-cohorte.com/assets/images/enzo_header.png"
+        alt="test"
+        @mouseenter="enterImageRight"
+        @mouseleave="leaveImageRight"
+      />
     </div>
     <main class="container">
       <h2 v-if="index !== 0">
@@ -165,17 +177,15 @@ export default {
   name: 'Header',
   data() {
     return {
-      index: 1,
+      index: 0,
       interval: null,
       test: false,
     }
   },
   mounted() {
     if (window.screen.width < 768) {
+      this.index = 1
       this.interval = setInterval(this.fade, 10000)
-    }
-    if (window.screen.width >= 768) {
-      this.index = 0
     }
   },
   beforeDestroy() {

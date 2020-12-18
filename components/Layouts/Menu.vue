@@ -241,6 +241,7 @@ export default {
   },
   methods: {
     handleMenu() {
+      const nav = document.getElementById('nav')
       const btn = document.getElementById('btn-menu')
       const span = btn.getElementsByTagName('span')
       if (this.displayMenu) {
@@ -248,6 +249,7 @@ export default {
         span[1].style.transform = 'translateY(100%)'
 
         if (window.innerWidth >= 1280) {
+          nav.style.background = ''
           btn.style.transform = ''
           btn.style.padding = ''
           btn.style.backgroundImage = ''
@@ -259,6 +261,8 @@ export default {
         span[0].style.transform = 'translateY(-100%)'
         span[1].style.transform = 'translateY(0)'
         if (window.innerWidth >= 1280) {
+          nav.style.background =
+            'linear-gradient(180deg, rgba(24,24,24,1) 0%, rgba(24,24,24,0.7) 60%, rgba(24,24,24,0) 100%)'
           btn.style.transform = 'translate(60px, 40px)'
           btn.style.padding = '15px 35px'
           btn.style.backgroundImage =

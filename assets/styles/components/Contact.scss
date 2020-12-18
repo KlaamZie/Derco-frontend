@@ -1,4 +1,39 @@
 section {
+  #error {
+    @apply fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F87171;
+
+    @apply py-30 px-15;
+
+    svg {
+      @apply absolute;
+      top: 5px;
+      left: 5px;
+    }
+
+    &::before {
+      content: '';
+      @apply absolute top-0 inset-x-0;
+      height: 3px;
+      background-color: #EF4444;
+      @apply overflow-hidden;
+
+      animation: 5.5s slideOut;
+    }
+
+    @keyframes slideOut {
+      from {
+        margin-left: 0%;
+      }
+
+      to {
+        margin-left: 100%;
+      }
+    }
+  }
   form {
     @apply mt-30;
 
@@ -80,6 +115,12 @@ section {
           @apply opacity-100;
         }
       }
+
+      p {
+        @apply text-white;
+        @apply mt-10;
+        @apply text-right;
+      }
     }
 
     input[type="submit"] {
@@ -123,8 +164,33 @@ section {
   opacity: 0;
 }
 
+.slide-error-enter-active {
+  transition: all .3s ease;
+}
+.slide-error-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-error-enter, .slide-error-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
 @screen md {
+
   section {
+    #error {
+      right: 20px;
+      left: auto;
+      bottom: 20px;
+      @apply rounded;
+
+      @apply p-20;
+
+      &::before {
+        @apply rounded-t;
+      }
+    }
 
     @apply relative;
 

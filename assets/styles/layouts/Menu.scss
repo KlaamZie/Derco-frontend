@@ -123,41 +123,41 @@ nav {
   }
 
   .menu-enter-active, .menu-leave-active {
-    transition: opacity .3s;
+    transition: opacity .2s;
   }
   .menu-leave-active {
-    transition-delay: 1.2s;
+    transition-delay: .8s;
   }
   .menu-enter, .menu-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
   }
 
   .menu-first-enter-active, .menu-first-leave-active {
-    transition: all .3s ease;
+    transition: all .2s ease;
   }
   .menu-first-enter-active {
-    transition-delay: .3s;
+    transition-delay: .2s;
   }
   .menu-first-leave-active {
-    transition-delay: .9s;
+    transition-delay: .6s;
   }
   .menu-first-enter, .menu-first-leave-to {
     opacity: 0;
   }
 
   .menu-second-enter-active, .menu-second-leave-active {
-    transition: all .3s ease;
-    transition-delay: .6s;
+    transition: all .2s ease;
+    transition-delay: .4s;
   }
   .menu-second-enter, .menu-second-leave-to {
     opacity: 0;
   }
 
   .menu-third-enter-active, .menu-third-leave-active {
-    transition: all .3s ease;
+    transition: all .2s ease;
   }
   .menu-third-enter-active {
-    transition-delay: .9s;
+    transition-delay: .6s;
   }
   .menu-third-leave-active {
     transition-delay: .3s;
@@ -167,10 +167,10 @@ nav {
   }
 
   .menu-last-enter-active, .menu-last-leave-active {
-    transition: all .3s ease;
+    transition: all .2s ease;
   }
   .menu-last-enter-active {
-    transition-delay: 1.2s;
+    transition-delay: .8s;
   }
   .menu-last-enter, .menu-last-leave-to {
     opacity: 0;
@@ -262,8 +262,11 @@ nav {
 
 @screen xl {
   nav {
-    @apply mt-40;
+    @apply mt-0;
+    @apply pt-40;
     @apply px-160;
+
+    transition: all .3s;
 
     div {
       @apply bg-transparent;
