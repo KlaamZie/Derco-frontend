@@ -222,8 +222,8 @@
         </ul>
         <transition name="menu-last">
           <aside v-show="displayMenu">
-            <p>contact@mail.com</p>
-            <p>06 06 06 06 06</p>
+            <p>contact@derniere-cohorte.com</p>
+            <p>06 59 45 26 84</p>
           </aside>
         </transition>
       </div>
