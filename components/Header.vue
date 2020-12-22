@@ -7,14 +7,14 @@
           key="guillaume"
           class="slides"
           src="https://api.derniere-cohorte.com/assets/images/guillaume_header.png"
-          alt="test"
+          alt="Guillaume Pinho - UX/UI Designer - Création d'identité - Branding - Création de logo - Montpellier"
         />
         <img
           v-if="index === 2"
           key="enzo"
           class="slides"
           src="https://api.derniere-cohorte.com/assets/images/enzo_header.png"
-          alt="test"
+          alt="Enzo Viry - Développeur Web - Site web - Application - Frontend - Backend - Javascript - VueJs - NuxtJs - Montpellier"
         />
       </transition>
     </div>
@@ -23,7 +23,7 @@
         id="headerLeftImg"
         class="slides"
         src="https://api.derniere-cohorte.com/assets/images/guillaume_header.png"
-        alt="test"
+        alt="Guillaume Pinho - UX/UI Designer - Création d'identité - Montpellier"
         @mouseenter="enterImageLeft"
         @mouseleave="leaveImageLeft"
       />
@@ -31,7 +31,7 @@
         id="headerRightImg"
         class="slides"
         src="https://api.derniere-cohorte.com/assets/images/enzo_header.png"
-        alt="test"
+        alt="Enzo Viry - Développeur Web - Site web - Application - Frontend - Backend - Javascript - VueJs - NuxtJs - Montpellier"
         @mouseenter="enterImageRight"
         @mouseleave="leaveImageRight"
       />
@@ -131,9 +131,12 @@
         >
           <h1>Guillaume P.</h1>
           <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/guillaume-pinho-1096st/"
+                >Linkedin</a
+              >
+            </li>
+            <li><a href="https://www.instagram.com/1096st/">Instagram</a></li>
           </ul>
         </div>
         <div
@@ -144,9 +147,14 @@
         >
           <h1>Enzo V.</h1>
           <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/enzo-viry-204561198/"
+                >Linkedin</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/enzo_viry/">Instagram</a>
+            </li>
           </ul>
         </div>
       </article>

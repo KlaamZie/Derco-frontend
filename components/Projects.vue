@@ -31,6 +31,7 @@
             project.slug +
             '/slider.jpg'
           "
+          :alt="project.desc"
         />
       </div>
     </article>

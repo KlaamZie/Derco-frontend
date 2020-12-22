@@ -70,6 +70,19 @@ export default {
       this.isActive = this.projects[actual]
     },
   },
+  head() {
+    return {
+      title: 'Dernière Cohorte - Collectif web à Montpellier',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            "Agence collaborative de freelance à Montpellier. Spécialiste en création de site internet, d'identité graphique et d'application web. - Projets uniques et création sur mesure - Devis gratuit - Délais respectés",
+        },
+      ],
+    }
+  },
 }
 </script>
 

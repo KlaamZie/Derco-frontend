@@ -129,7 +129,7 @@
         <ul @click="handleMenu">
           <transition name="menu-first">
             <li v-show="displayMenu">
-              <a href="#project">
+              <a href="/#project">
                 Votre Projet
                 <span>
                   <svg
@@ -152,7 +152,7 @@
           </transition>
           <transition name="menu-second">
             <li v-show="displayMenu">
-              <a href="#portfolio">
+              <a href="/#portfolio">
                 Portfolio
                 <span>
                   <svg
@@ -175,7 +175,7 @@
           </transition>
           <transition name="menu-third">
             <li v-show="displayMenu">
-              <a href="#team">
+              <a href="/#team">
                 Equipe
                 <span>
                   <svg
@@ -198,7 +198,7 @@
           </transition>
           <transition name="menu-last">
             <li v-show="displayMenu">
-              <a href="#contact">
+              <a href="/#contact">
                 Nous parler
                 <span>
                   <svg
@@ -223,7 +223,6 @@
         <transition name="menu-last">
           <aside v-show="displayMenu">
             <p>contact@derniere-cohorte.com</p>
-            <p>06 59 45 26 84</p>
           </aside>
         </transition>
       </div>

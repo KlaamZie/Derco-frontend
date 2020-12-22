@@ -1,0 +1,53 @@
+#legals {
+  @apply pt-60;
+
+  > h1 {
+    @apply text-white text-center text-30;
+  }
+
+  > div {
+    @apply mt-20;
+
+    h2 {
+      @apply text-green text-20;
+
+      &:not(:first-of-type) {
+        @apply mt-20;
+      }
+    }
+
+    h3 {
+      @apply mt-10;
+      @apply text-green text-16;
+    }
+
+    p, li {
+      @apply mt-10;
+      @apply text-justify text-white text-16;
+    }
+
+    a {
+      @apply text-green;
+    }
+
+    h3 > a {
+      @apply text-white;
+    }
+
+    h3 > span {
+      @apply text-white;
+    }
+  }
+}
+
+@screen md {
+  #legals {
+    @apply pt-180;
+  }
+}
+
+@screen xl {
+  #legals {
+    @apply pt-100;
+  }
+}

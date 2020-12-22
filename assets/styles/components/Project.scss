@@ -185,6 +185,8 @@ section {
 
         svg {
           @apply mb-5;
+          height: 60px;
+          width: 60px;
         }
       }
     }
@@ -239,8 +241,22 @@ section {
 
         svg {
           @apply mb-10;
+          height: 90px;
+          width: 90px;
         }
       }
+    }
+  }
+}
+
+@screen extra {
+  section {
+    > aside {
+      @apply px-320;
+    }
+
+    article:first-of-type {
+      @apply px-320;
     }
   }
 }

@@ -68,6 +68,7 @@
         <select id="besoins" v-model="type" name="besoins">
           <option value="Informations">D'informations</option>
           <option value="Devis">D'un devis</option>
+          <option value="Rendez-vous">D'un rendez-vous</option>
         </select>
       </fieldset>
       <fieldset>

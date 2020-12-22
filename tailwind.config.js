@@ -6,7 +6,6 @@ module.exports = {
   purge: [],
   theme: {
     screens: {
-      sm: '512px',
       md: '768px',
       xl: '1280px',
       extra: '1920px',

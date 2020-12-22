@@ -11,7 +11,7 @@
       <article>
         <img
           src="https://api.derniere-cohorte.com/assets/images/enzo_equipe.jpg"
-          alt="test"
+          alt="Enzo Viry - Développeur Web - Site web - Application - Frontend - Backend - Javascript - VueJs - NuxtJs - Montpellier"
         />
         <div>
           <div>
@@ -31,7 +31,7 @@
       <article>
         <img
           src="https://api.derniere-cohorte.com/assets/images/guillaume_equipe.jpg"
-          alt="test"
+          alt="Guillaume Pinho - UX/UI Designer - Création d'identité - Branding - Création de logo - Montpellier"
         />
         <div>
           <div>

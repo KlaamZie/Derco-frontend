@@ -15,7 +15,7 @@
       :src="
         'https://api.derniere-cohorte.com/assets/' + isactive.slug + '/1.jpg'
       "
-      alt=""
+      :alt="isactive.desc"
       onerror="this.style.display = 'none'"
     />
     <article>
@@ -42,21 +42,21 @@
       :src="
         'https://api.derniere-cohorte.com/assets/' + isactive.slug + '/2.jpg'
       "
-      alt=""
+      :alt="isactive.desc"
       onerror="this.style.display = 'none'"
     />
     <img
       :src="
         'https://api.derniere-cohorte.com/assets/' + isactive.slug + '/3.jpg'
       "
-      alt=""
+      :alt="isactive.desc"
       onerror="this.style.display = 'none'"
     />
     <img
       :src="
         'https://api.derniere-cohorte.com/assets/' + isactive.slug + '/4.jpg'
       "
-      alt=""
+      :alt="isactive.desc"
       onerror="this.style.display = 'none'"
     />
     <article>

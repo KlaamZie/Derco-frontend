@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <nuxt-link to="/#">Mentions légales</nuxt-link>
+    <nuxt-link to="/legals">Mentions légales</nuxt-link>
   </footer>
 </template>
 

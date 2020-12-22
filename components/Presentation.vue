@@ -7,7 +7,7 @@
     <article>
       <img
         src="https://api.derniere-cohorte.com/assets/images/pres1.png"
-        alt="test"
+        alt="Création de site internet - UX/UI Design - Développement Web - Montpellier - Occitanie"
       />
       <div class="container">
         <h3>UX/UI Design & Web Developpement</h3>
@@ -24,7 +24,7 @@
     <article>
       <img
         src="https://api.derniere-cohorte.com/assets/images/pres2.png"
-        alt="test"
+        alt="Création d'identité - Branding - Création de logo - Montpellier"
       />
       <div class="container">
         <h3>Graphisme Imprimé</h3>
@@ -32,7 +32,7 @@
           La création d’une identité unique est devenue indispensable dans
           toutes les organisations. L’analyse et le savoir-faire d’un
           professionnel du domaine vous permettra de cibler et d’attirer les
-          personnes souhaitées vers vous. Vous disposerez d’un accompagnent
+          personnes souhaitées vers vous. Vous disposerez d’un accompagnement
           durant toutes les étapes de votre projet de création graphique sur
           tous vos supports.
         </p>
