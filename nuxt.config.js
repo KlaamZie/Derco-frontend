@@ -16,6 +16,10 @@ export default {
       },
     ],
   },
+  
+  generate: {
+    fallback: true
+  }
 
   server: {
     host: '0.0.0.0',
